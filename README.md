@@ -43,6 +43,7 @@ Then check the port 8000 as `http://127.0.0.1:8000`
 <details>
       <summary> Create a file </summary>
       
+* followed [this](https://www.youtube.com/watch?v=Eis9vu4XiNI)      
 ```python      
 import os
 def create_project_dir(directory):
