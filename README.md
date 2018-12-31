@@ -14,6 +14,7 @@
 <details>
       <summary> Settings sqlite to Mysql </summary>
 
+
 * To change from sqlite to mysql got to `/user/local/lib/python3.7/site-packages/memorious-0.7.20-py3.7.egg/memorious/settings.py`
 
 ```python
@@ -28,6 +29,7 @@ where root is our username and password is our password and aml is our database 
 pip install pymysql   // if you use python2
 pip3 install pymysql  //if you use python3
 ```
+* Notice: in order to know which python are you  when run `memorious run crawl` it shows on top 
 </details>
 
 <details>
