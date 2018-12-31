@@ -12,6 +12,39 @@
 </details>
 
 <details>
+      <summary> Settings </summary>
+
+* To change from sqlite to mysql got to `/user/local/lib/python3.7/site-packages/memorious-0.7.20-py3.7.egg/memorious/settings.py`
+
+```python
+#DATASTORE_FILE = os.path.join(BASE_PATH, 'datastore.sqlite3')
+#DATASTORE_URI = env('DATASTORE_URI', 'sqlite:///%s' % 'datastore.sqlite3')
+to 
+DATASTORE_URI = env('DATASTORE_URI', 'mysql+pymysql://root:password@localhost/aml')
+```
+where root is our username and password is our password and aml is our database name
+* Common Error install pymsql for the specific version of python as well
+```python
+pip install pymysql   // if you use python2
+pip3 install pymysql  //if you use python3
+```
+</details>
+
+<details>
+      <summary> MySQL </summary>
+
+* Show all attributes from a table
+```mysql
+SHOW COLUMNS FROM table_name;
+```
+* display attributes from tables
+```mysql
+select id from table_name;
+show tables;
+```
+</details>
+
+<details>
       <summary> Install </summary>
 
 * Use this [link](https://www.slothparadise.com/how-to-install-django-on-mac/)
