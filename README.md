@@ -91,7 +91,6 @@ Then check the port 8000 as `http://127.0.0.1:8000`
       <summary> Memorius </summary>
       
 * A [link](https://github.com/alephdata/memorious)
-* Changed settings.py at as 
 ```python
 memorious list
 memorious run crawl_name
