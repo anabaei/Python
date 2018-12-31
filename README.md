@@ -12,7 +12,7 @@
 </details>
 
 <details>
-      <summary> Settings </summary>
+      <summary> Settings sqlite to Mysql </summary>
 
 * To change from sqlite to mysql got to `/user/local/lib/python3.7/site-packages/memorious-0.7.20-py3.7.egg/memorious/settings.py`
 
