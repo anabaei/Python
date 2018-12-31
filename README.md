@@ -40,6 +40,8 @@ pip3 install pymysql  //if you use python3
 * Show all attributes from a table
 ```mysql
 SHOW COLUMNS FROM table_name;
+OR 
+Describe table;
 ```
 * display attributes from tables
 ```mysql
