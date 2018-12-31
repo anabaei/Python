@@ -2,6 +2,16 @@
 #### Python
 
 <details>
+      <summary> Crawlers </summary>
+
+* Speed up crawling [link](https://stackoverflow.com/questions/8888454/where-to-store-web-crawler-data)
+* Crawlers
+```python
+
+```
+</details>
+
+<details>
       <summary> Install </summary>
 
 * Use this [link](https://www.slothparadise.com/how-to-install-django-on-mac/)
