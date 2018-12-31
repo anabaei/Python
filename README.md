@@ -166,4 +166,4 @@ memorious run eu_mepspwd
   * [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
   * [MySQL DBAPI](https://docs.sqlalchemy.org/en/latest/dialects/mysql.html#module-sqlalchemy.dialects.mysql.mysqldb)
   * [build crawler](https://memorious.readthedocs.io/en/latest/buildingcrawler.html)
-
+  * [open sanctions](https://github.com/alephdata/opensanctions)
