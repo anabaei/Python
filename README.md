@@ -195,7 +195,9 @@ memorious run eu_mepspwd
 ```java   
   python setup.py --help-commands
   python setup.py build
-  
+  python setup.py install
+  memorious list
+  memorious run crawler_name
 ```  
    </details>  
    <details>
