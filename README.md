@@ -129,15 +129,6 @@ finder.feed(
 </details> 
 
 <details>
-      <summary> HTML Parser a tags </summary>
-      
-*
-```python
-
-```
-</details> 
-
-<details>
       <summary> Address which page to Crawl </summary>
       
 * Queue keeps all hyper links inside page 
