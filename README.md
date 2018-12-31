@@ -30,6 +30,8 @@ pip install pymysql   // if you use python2
 pip3 install pymysql  //if you use python3
 ```
 * Notice: in order to know which python are you  when run `memorious run crawl` it shows on top 
+* `gb_coh_disqualified` gave error
+
 </details>
 
 <details>
@@ -211,6 +213,12 @@ create_data_files(
 )
 ```
 </details>
+ <details>
+      <summary> Search Engine (spider) </summary>
+
+* 
+</details>     
+
 
  <details>
       <summary> Links </summary>
