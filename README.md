@@ -91,7 +91,17 @@ Then check the port 8000 as `http://127.0.0.1:8000`
 
 <details>
       <summary> Memorius </summary>
-      
+ 
+* Git clone from [here](https://github.com/alephdata/memorious) 
+* Then make sure the version of python u are using and then if you want use mysql change this
+```java
+`/user/local/lib/python3.7/site-packages/memorious-0.7.20-py3.7.egg/memorious/settings.py`
+```
+as when `aml` is our database name and root and passwords are user and password for mysql
+```java
+DATASTORE_URI = env('DATASTORE_URI', 'mysql+pymysql://root:password@localhost/aml')
+```
+* now it is ready to run it as 
 * A [link](https://github.com/alephdata/memorious)
 ```python
 memorious list
