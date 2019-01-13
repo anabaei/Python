@@ -90,7 +90,7 @@ Then check the port 8000 as `http://127.0.0.1:8000`
 </details>
 
 <details>
-      <summary> Memorius </summary>
+      <summary> Memorius  Start Sanctions</summary>
  
 * Git clone from [here](https://github.com/alephdata/memorious) 
 * Then make sure the version of python u are using and then if you want use mysql change this
