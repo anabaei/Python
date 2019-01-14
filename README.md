@@ -124,7 +124,16 @@ memorious run crawl_name
   
   <details>
       <summary> Run Sanction </summary>
-   
+ 
+ * First make sure that you using python 3 
+```java
+/// rm if python2 
+$ brew rm python 
+$ rm -rf /usr/local/opt/python
+$ brew prune 
+$ brew install python3
+```
+ * 
 ```java   
   python setup.py --help-commands
   python setup.py build
