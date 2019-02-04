@@ -1,5 +1,8 @@
 import time
 import os
+import csv
+import json
+import pandas
 import configCredentials
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -65,6 +68,9 @@ for event_card in past_event_cards:
 script_directory = os.getcwd()
 download_directory = script_directory + "/downloaded_files/"
 
+## Create dictionary we can use later to extract the event titles
+event_title_dictionary = {}
+
 ## Run through the list of links, extract the event ID and use it to navigate to the export page
 attendee_link_prefix = "https://www.eventbrite.com/myevent/"
 attendee_link_suffix = "/reports/attendee/"
@@ -81,6 +87,21 @@ for event_link in list_of_links:
     attendee_summary_page = attendee_link_prefix + event_id + attendee_link_suffix
     print("Getting CSV from " + attendee_summary_page)
     driver.get(attendee_summary_page)
+
+    wait_for_ajax(driver)
+
+    ## Get the name of the event, taking into account whichever title field has text
+    fullpage_event_name = driver.find_element_by_css_selector("div.eds-show-up-md > div > h2").text
+    minpage_event_name = driver.find_element_by_css_selector("div.eds-show-down-mn > div > h2").text
+
+    if ( len(fullpage_event_name) > len(minpage_event_name) ):
+        event_name = fullpage_event_name
+    else:
+        event_name = minpage_event_name
+
+    event_title_dictionary[event_id] = event_name
+
+    ## Trigger the download
     driver.find_element_by_css_selector("a[data-download-fmt='csv']").click()
 
 ## Close the browser window, but give a second to sleep so downloads can finish 
@@ -88,5 +109,31 @@ time.sleep(1)
 print("Finished scraping, closing.")
 driver.quit()
 
+## File rename portion
 
+current_path = os.getcwd()
+path_to_csvs = current_path + '/downloaded_files'
+final_json_file_name = 'eventBriteEvents.json'
+final_json_file = open(final_json_file_name, 'w')
+
+## rename the csv to the name of the folder, then move it out
+for root, dirs, files in os.walk(path_to_csvs):
+    ## If we are not in the root folders directory
+    if (root != path_to_csvs):
+        current_filepath = root + '/' + files[0]
+        print("Renaming: " + current_filepath)
+        ## Move the csv out of the folder and rename it
+        os.rename(current_filepath, root + '.csv')
+        os.rmdir(root)
+
+## convert to json
+final_list = []
+for root, dirs, files in os.walk(path_to_csvs):
+    for file in files:
+        input_file_event_id = file.split('.')[0]
+        dataframe = pandas.read_csv(path_to_csvs + '/' + file)
+        json_from_csv = dataframe.to_json(orient="records")
+        final_list.append( {"eventId" : event_id, "eventName": event_title_dictionary[event_id],"attendeeData" : json_from_csv} )
+
+json.dump(final_list, final_json_file)
 
