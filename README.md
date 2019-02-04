@@ -4,6 +4,7 @@
 - Python3 must be installed
 - Chrome must be installed
 - Selenium must be installed, use: `pip3 install selenium`
+- Pandas (python3 data library) must be installed, use `pip3 install pandas`
 - Chromedriver must be in PATH, visit `https://sites.google.com/a/chromium.org/chromedriver/downloads`, download it and then place it into `usr/bin` or `usr/local/bin`.
 
 ## How to run

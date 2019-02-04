@@ -50,7 +50,7 @@ driver.get(eventBriteMyEventsUrl)
 ## Click the past events tab, make note of how many events there are
 driver.find_element_by_css_selector("a.js-past-events-toggle").click()
 past_events_num = driver.find_element_by_css_selector("a.js-past-events-toggle > em").text
-print("There tab says there are " + past_events_num + " past events.")
+print("The tab says there are " + past_events_num + " past events.")
 driver.find_element_by_css_selector("a.js-show-all-btn").click()
 wait_for_ajax(driver)
 
@@ -79,14 +79,14 @@ for event_link in list_of_links:
 
     ## Visit the attendee summary page
     attendee_summary_page = attendee_link_prefix + event_id + attendee_link_suffix
-    print("Getting CSV from " + attendee_summary_page + ".")
+    print("Getting CSV from " + attendee_summary_page)
     driver.get(attendee_summary_page)
     driver.find_element_by_css_selector("a[data-download-fmt='csv']").click()
 
-## Close the browser window
+## Close the browser window, but give a second to sleep so downloads can finish 
+time.sleep(1)
 print("Finished scraping, closing.")
 driver.quit()
 
-## Convert the files inside of the folders to named files, outside of folders, but give the program a second to sleep
-time.sleep(1)
+
 
