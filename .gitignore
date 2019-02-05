@@ -1,0 +1,5 @@
+/downloaded_files
+.DS_Store
+__pycache__
+configCredentials.py
+eventBriteEvents.json
