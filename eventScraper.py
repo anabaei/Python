@@ -132,8 +132,9 @@ for root, dirs, files in os.walk(path_to_csvs):
     for file in files:
         input_file_event_id = file.split('.')[0]
         dataframe = pandas.read_csv(path_to_csvs + '/' + file)
-        json_from_csv = dataframe.to_json(orient="records")
-        final_list.append( {"eventId" : input_file_event_id, "eventName": event_title_dictionary[input_file_event_id],"attendeeData" : json_from_csv} )
+        cleaned_dataframe = dataframe.fillna('')
+        dataframe_dict = cleaned_dataframe.to_dict(orient="records")
+        final_list.append( {"eventId" : input_file_event_id, "eventName": event_title_dictionary[input_file_event_id], "attendeeData" : dataframe_dict} )
 
 json.dump(final_list, final_json_file)
 
