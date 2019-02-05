@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 chrome_options = Options()
 ## Choose whether or not chrome will run headless
-chrome_options.headless = True
+chrome_options.headless = False
 
 ## Use the chrome web driver, set the options
 driver = webdriver.Chrome(options=chrome_options)
