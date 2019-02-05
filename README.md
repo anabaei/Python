@@ -9,6 +9,6 @@
 
 ## How to run
 - Create a copy of `configCredentials.py.example`, fill it with the proper EventBrite details, then rename it to `configCredentials.py`
-- Use `python3 eventScraper.py` to collect the CSVs from EventBrite.  They will be placed in the created folder `downloaded_files`, under another directory with the event ID as the name.
-- (In progress, not yet complete) Use `python3 fileShift.py` to move all the CSVs out from the directories and rename them to the eventID from the directory.
+- Modify the username and directory variable in `runScraper.sh`
+- Use `bash runScraper.sh` to collect the CSVs, process them and upload the combined json file to ftp server.
 
