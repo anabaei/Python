@@ -1,4 +1,24 @@
-# Scrape event CSVs from EventBrite with Python3 and Selenium
+
+## Run Python 
+
+* on command line 
+```python
+python myhello.py
+```
+#### Read Json File
+* To read json who file we have
+```python
+import json 
+from pprint import pprint
+
+with open('data.json') as f:
+    data = json.load(f)
+    
+pprint(data)
+```
+* To hit canvas we should change header with key `Authorization` and value `Bearer canvasToken`
+
+## Scrape event CSVs from EventBrite with Python3 and Selenium
 
 ## Before running
 - Python3 must be installed
