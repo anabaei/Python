@@ -16,6 +16,11 @@ with open('data.json') as f:
     
 pprint(data)
 ```
+```python
+#data is a list of hashes to read for example name of each object loop through as
+for x in data:
+  print(x['name'])
+```
 * To hit canvas we should change header with key `Authorization` and value `Bearer canvasToken`
 
 ## Scrape event CSVs from EventBrite with Python3 and Selenium
