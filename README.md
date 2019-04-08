@@ -1,4 +1,15 @@
 
+<details> 
+    <summary> Run Scrapper </summary> 
+
+* Creaet `configCredentials.py` from `configCredentialsExample.py` providing username and passwords for eventbrite
+* change username to `username=anabaei` at `runScraper.sh` then run
+```javacript
+bash runScraper.sh
+```
+
+</details> 
+
 ## Run Python 
 
 * on command line 
