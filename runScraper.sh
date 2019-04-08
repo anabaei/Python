@@ -1,7 +1,7 @@
 #!/bin bash
 
 # Set username here
-username=jtoering
+username=anabaei
 
 # Set ftp directory here
 directory=pub_html/eventbrite/
