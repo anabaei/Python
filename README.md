@@ -1,4 +1,37 @@
 
+
+
+<details>
+    <summary> Read and write into file </summary>
+    
+```python
+n = int(raw_input())
+for i in range(0,n):
+    a, b = raw_input().split()
+    print int(a) + int(b)
+```
+* Write a program that adds two numbers and print the result out 
+
+```
+// inputs
+3
+1 5
+3 10
+999 -34343
+// outputs
+6
+13
+-33344
+```
+```python
+n = int(raw_input())
+for _ in xrange(n):
+    a, b = map(int, raw_input().strip().split())
+    print a + b
+```
+</details>
+
+
 <details> 
     <summary> Run Scrapper </summary> 
 
