@@ -5,10 +5,19 @@
     <summary> Read and write into file </summary>
     
 ```python
-n = int(raw_input())
-for i in range(0,n):
-    a, b = raw_input().split()
-    print int(a) + int(b)
+# creating an empty list 
+lst = [] 
+  
+# number of elemetns as input 
+n = int(input("Enter number of elements : ")) 
+  
+# iterating till the range 
+for i in range(0, n): 
+    ele = int(input()) 
+  
+    lst.append(ele) # adding the element 
+      
+print(lst) 
 ```
 * Write a program that adds two numbers and print the result out 
 
