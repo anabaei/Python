@@ -29,6 +29,10 @@ a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:n]
   
 print("\nList is - ", a) 
 ```
+* Read unlimited inputs into array of unknown size
+```python
+  lst=list(map(int,input().split()))
+```
 * Write a program that adds two numbers and print the result out 
 
 ```
