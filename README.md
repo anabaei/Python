@@ -30,7 +30,71 @@ for _ in xrange(n):
     print a + b
 ```
 </details>
+<details> 
+    <summary> Basic </summary> 
 
+* 
+```python
+x,y = 10,100
+print(x,y)
+print("ssa"+str(12)) // convert int to string
+
+// globale variable
+globale f // make a variable global even inside a child function
+del f     // undefined a variable 
+```
+* Functions
+```python
+def ome(arg1, arg2=1):   //with default value
+    print("aa")
+    return arg1
+ome(1,2)
+
+// function with variable number of args
+def me(*args):
+    result = 0
+    for x in args:
+        result += x
+    return result
+
+print(me(1,2,3,4)) 
+```
+* Conditional
+```python
+  x,y = 10, 100
+    if(x<y):
+        print(x,y)
+    elif (x>y):
+        print(x,y)
+    else:
+        print(x,y)
+/// 
+st = "x is bigger than y" if(x>y) else "y is bigger"
+```
+* Loops
+```python
+   while(x<5):
+        print(x)
+        x +=1
+     // for loops 2..4   
+    for x in range(2,5):
+        print(x)
+
+/// Skip the rest of the loop or break
+       for x in range(1,10):
+        if(x%2 == 0): continue
+        print(x)  #prints odd numbers
+        
+        for x in range(1,10):
+        if(x > 4): break
+        print(x)  #only 1,2,3 and stop
+        
+/// geting index and values
+     days = ["1","a","sd"]
+     for i,d in enumerate(days):
+         print(i,d)
+```
+</details>    
 
 <details> 
     <summary> Run Scrapper </summary> 
