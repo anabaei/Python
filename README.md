@@ -58,6 +58,10 @@ for _ in xrange(n):
 
 * 
 ```python
+#print in same line
+for i in range(len(a)):
+    print( a[i], end =" ")
+
 x,y = 10,100
 print(x,y)
 print("ssa"+str(12)) // convert int to string
