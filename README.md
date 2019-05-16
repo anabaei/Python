@@ -19,6 +19,16 @@ for i in range(0, n):
       
 print(lst) 
 ```
+* READ inputs in a line 
+```python
+# number of elements 
+n = int(input("Enter number of elements : ")) 
+  
+# Below line read inputs from user using map() function  
+a = list(map(int,input("\nEnter the numbers : ").strip().split()))[:n] 
+  
+print("\nList is - ", a) 
+```
 * Write a program that adds two numbers and print the result out 
 
 ```
