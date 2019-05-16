@@ -42,8 +42,14 @@ print("ssa"+str(12)) // convert int to string
 // globale variable
 globale f // make a variable global even inside a child function
 del f     // undefined a variable 
+
+// bitwise 
+y = 0x0a
+x = 0x02
+z = x & y # means binary action
+print(f' x as hexa with 2 character is {x:02x} and as binary with 8 charactor is {x:08b}') 
 ```
-* Functions
+#### Functions
 ```python
 def ome(arg1, arg2=1):   //with default value
     print("aa")
@@ -59,7 +65,7 @@ def me(*args):
 
 print(me(1,2,3,4)) 
 ```
-* Conditional
+#### Conditional
 ```python
   x,y = 10, 100
     if(x<y):
@@ -71,7 +77,7 @@ print(me(1,2,3,4))
 /// 
 st = "x is bigger than y" if(x>y) else "y is bigger"
 ```
-* Loops
+#### Loops
 ```python
    while(x<5):
         print(x)
@@ -79,7 +85,17 @@ st = "x is bigger than y" if(x>y) else "y is bigger"
      // for loops 2..4   
     for x in range(2,5):
         print(x)
-
+     games = ["aaa","bbb","ccc","ddd","eee","ffff","ggg"]
+     print(games[1])
+     print(games[1:6:2])  #print from 1 to 4 indexs as "bbb" "ddd" "ffff"
+     i = games.index("aaa") # return 0
+     games.append("rrr")    # add to the end
+     games.insert(0,"vvv")  # add to index 0
+     games.remove("aaa")
+     games.pop() # remove from end of the list
+     del games(2)
+     print(', '.join(games)) #add , between members in array
+     len(games)   # size of array
 /// Skip the rest of the loop or break
        for x in range(1,10):
         if(x%2 == 0): continue
@@ -93,6 +109,36 @@ st = "x is bigger than y" if(x>y) else "y is bigger"
      days = ["1","a","sd"]
      for i,d in enumerate(days):
          print(i,d)
+```
+* Hashes
+```python
+   hashes = {'a':1, 'b':2, 'c':3, 'd':4}
+        hash2 = dict(a=1, b=2, c=3, d=4)
+        for k,v in hash2.items():
+            print(f'{k}, {v}')
+         for k in hash2.keys(): print(k)
+         for v in hash2.values(): print(v)
+         hash2['f']=5 #assign new value
+```
+#### Classes
+```python
+class myclass():
+    def method1(self):
+        print("mehtod 1")
+
+    def method2(self,somthing):
+        print(somthing)
+
+c = myclass()  // create object of the class 
+c.method1()    // self refers to current object and never calls
+c.method2("sss")
+
+// inherite classes 
+class second(myclass): 
+      def somemethod(self):
+          myclass.method1(self)
+          print("done!")
+          
 ```
 </details>    
 
