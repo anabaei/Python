@@ -56,7 +56,14 @@ for _ in xrange(n):
 <details> 
     <summary> Basic </summary> 
 
-* 
+#### Arrays
+* To creaet array of a fixed size we can have
+```python
+>> lst = [None] * 5
+>> [None, None, None, None, None]
+>> aa = [[0,0]]*2
+>> [[0, 0], [0, 0]]
+```
 ```python
 #print in same line
 for i in range(len(a)):
