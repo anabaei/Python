@@ -65,7 +65,11 @@ for _ in xrange(n):
 >> [[0, 0], [0, 0]]
 >>  [[0] * (2)] * (2)
 >> same result as above
+To update an 2d array or matrix
+aa[1] = [4,5]    # would update row 2 
+aa[1][2] = 4 # does not do what you really expect! 
 ```
+
 ```python
 #print in same line
 for i in range(len(a)):
