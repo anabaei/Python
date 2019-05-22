@@ -63,6 +63,8 @@ for _ in xrange(n):
 >> [None, None, None, None, None]
 >> aa = [[0,0]]*2
 >> [[0, 0], [0, 0]]
+>>  [[0] * (2)] * (2)
+>> same result as above
 ```
 ```python
 #print in same line
