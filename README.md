@@ -69,6 +69,26 @@ To update an 2d array or matrix
 aa[1] = [4,5]    # would update row 2 
 aa[1][2] = 4 # does not do what you really expect! 
 ```
+#### Map & Lambda
+* Map is a function run on a list as 
+```python
+r = map(func, seq)
+```
+* For example
+```python
+temperatures = (36.5, 37, 37.5, 38, 39)
+
+def celsius(T):
+      return (float(5)/9)*(T-32)
+      
+c = list(map(celsius,temperatures))
+```
+* Same map written with lambda
+```python
+temperatures = (36.5, 37, 37.5, 38, 39)
+f = list(map(lambda x: (float(5)/9)*(x-32),temperatures)) 
+```
+* Also map can go through more than one list as [here](https://www.python-course.eu/python3_lambda.php)
 
 ```python
 #print in same line
