@@ -111,6 +111,12 @@ x = 0x02
 z = x & y # means binary action
 print(f' x as hexa with 2 character is {x:02x} and as binary with 8 charactor is {x:08b}') 
 ```
+*
+```python
+lst = [('candy','30','100'), ('apple','10','200'), ('baby','20','300')]
+lst.sort(key=lambda x:x[1])
+print(lst)   
+```
 #### Functions
 ```python
 def ome(arg1, arg2=1):   //with default value
