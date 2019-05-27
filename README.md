@@ -83,6 +83,8 @@ def celsius(T):
       
 c = list(map(celsius,temperatures))
 ```
+#### Lambda 
+* lambda is an anonymouse function in javascript
 * Same map written with lambda
 ```python
 temperatures = (36.5, 37, 37.5, 38, 39)
