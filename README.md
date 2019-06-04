@@ -1,5 +1,115 @@
 
 
+<details>
+    <summary> Abstact data type </summary>
+    
+* Abstract Data types ADTs means what kind of data a data structure can hold and what operations are allowed on that data.
+* You may create a new ADT and define them or you can use already defined ADTs like linked list. 
+* difference between ADT and data structure? Abstract Data Types express ideas about a collection of data. Data Structures implement those ideas using code.
+</details>    
+
+<details> 
+    <details> List and linkedlist</details>
+
+* Python list can contains different types of values
+```python
+a = [1, true. "amir", 43]
+```
+* Python uses  `dynamic array` to save data. Dynamic array uses contiguous chunk of memory to store data and save each item in its own slot and index counts from 0. So in Dynamic array we can access directly to memory located the item using an integer as its address. 
+* in contrast `Linkedlist` has only a pointer to another node in memory.
+* `linkedlist` has `head` to show the entry point. `Head` is just a reference and is not a seperate node and End of linkedlist is a node which points to `none`
+* If head referecnce to `none` means empty linkedlist
+* Linked lists are recursive DTS because each node points to another collection of nodes
+#### When to Use Linked List
+* When we want to insert items "in between" other items
+* Collection size is unknown
+* no need random access
+* no concern about memory usage
+</details>
+<details>
+    <summary> Node classes for single and dounle linked lists</summary>
+    
+*  A node class needs a data and put to none at first we create
+```python
+class SLLNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+     # this method returns a readable anyobjest we have. It returns as string format our self.data
+    def __repr__(self):
+        return "SLLNode object: data={}".format(self.data)
+
+    def get_data(self):
+        """Return the self.data attribute."""
+        return self.data
+
+    def set_data(self, new_data):
+        """Replace the existing value of the self.data attribute with new_data
+        parameter."""
+        self.data = new_data
+
+    def get_next(self):  
+        """Return the self.next attribute"""
+        return self.next
+
+    def set_next(self, new_next):
+        """Replace the existing value of the self.next attribute with new_next"""
+        self.next = new_next
+
+```
+* To run this command you can use `python3 -i filename.py` command then
+```python
+node = SLLNode('apple')
+node.get_data()
+node.set_data(7)
+node2 = SLLNode(9)
+node.set_next(node2)
+node.get_next()  // return none
+```
+#### Double LinkedList 
+* To have double linked list to traverse the list in both ways
+```python
+class DLLNode:
+
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.previous = None
+
+    def __repr__(self):
+        return "SLLNode object: data={}".format(self.data)
+
+    def get_data(self):
+        """Return the self.data attribute."""
+        return self.data
+
+    def set_data(self, new_data):
+        """Replace the existing value of the self.data attribute with new_data
+        parameter."""
+        self.data = new_data
+
+    def get_next(self):
+        """Return the self.next attribute"""
+        return self.next
+
+    def set_next(self, new_next):
+        """Replace the existing value of the self.next attribute with new_next
+        parameter."""
+        self.next = new_next
+
+    def get_previous(self):
+        """Return the self.previous attribute"""
+        return self.previous
+
+    def set_previous(self, new_previous):
+        """Replace the existing value of the self.previous attribute with
+        new_previous parameter."""
+        self.previous = new_previous
+```
+</details>
+
+
 
 <details>
     <summary> Read and write into file </summary>
