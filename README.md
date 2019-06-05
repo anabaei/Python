@@ -116,8 +116,9 @@ class DLLNode:
 ```python
 sum = lambda a, b, c: a + b + c
 sum(1,2,3) #return 6
-
 ```
+*  Lambda can be used inside lists and dictionaries
+
 </details>
 <details>
     <summary> Read and write into file </summary>
