@@ -118,8 +118,31 @@ sum = lambda a, b, c: a + b + c
 sum(1,2,3) #return 6
 ```
 *  Lambda can be used inside lists and dictionaries
+* Lambda is used with Map, filter and seduce. Filter is use to filterout the inputrs and seduce use to travers through inputs.
+A good [resource](https://www.python-course.eu/python3_lambda.php)
+```python
+>>> even_numbers = list(filter(lambda x: x % 2 == 0, fibonacci))
+>>> print(even_numbers)
+[0, 2, 8, 34]
 
+>>> import functools
+>>> functools.reduce(lambda x,y: x+y, [47,11,42,13])
+113
+```
 </details>
+<details>
+    <summary> Regex </summary>
+   
+* Using regex [online](https://regex101.com)
+```python
+import re
+re.search('/W','amir nabaei@vfd') # returns not charactors
+re.search('[a-zA-Z0-9]','amir nabaei@vfd') # retun only numbers and charactors 
+bool(re.search('[!@#$%^&*(),.?":{}|<>]','amir nabaei@vfd'))   #check for special charactors
+/^([a-z0-9]{5,})$/.test('abc12');   // true
+```
+ <details>   
+
 <details>
     <summary> Read and write into file </summary>
     
