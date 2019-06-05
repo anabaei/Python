@@ -141,6 +141,7 @@ re.search('[a-zA-Z0-9]','amir nabaei@vfd') # retun only numbers and charactors
 bool(re.search('[!@#$%^&*(),.?":{}|<>]','amir nabaei@vfd'))   #check for special charactors
 /^([a-z0-9]{5,})$/.test('abc12');   // true
 ```
+</details>
  <details>   
 
 <details>
