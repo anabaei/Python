@@ -142,8 +142,7 @@ bool(re.search('[!@#$%^&*(),.?":{}|<>]','amir nabaei@vfd'))   #check for special
 /^([a-z0-9]{5,})$/.test('abc12');   // true
 ```
 </details>
- <details>   
-
+  
 <details>
     <summary> Read and write into file </summary>
     
