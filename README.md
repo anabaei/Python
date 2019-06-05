@@ -9,7 +9,7 @@
 </details>    
 
 <details> 
-    <details> List and linkedlist</details>
+    <summary> List and linkedlist</summary>
 
 * Python list can contains different types of values
 ```python
