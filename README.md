@@ -109,8 +109,16 @@ class DLLNode:
 ```
 </details>
 
+<details>
+    <summary> Lambda </summary>
 
+* Lambda is anonymouse functions like
+```python
+sum = lambda a, b, c: a + b + c
+sum(1,2,3) #return 6
 
+```
+</details>
 <details>
     <summary> Read and write into file </summary>
     
