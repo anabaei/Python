@@ -129,6 +129,11 @@ A good [resource](https://www.python-course.eu/python3_lambda.php)
 >>> functools.reduce(lambda x,y: x+y, [47,11,42,13])
 113
 ```
+* If condition inside lambda:
+```python
+lambda x: x*x if (x>0)
+
+```
 </details>
 <details>
     <summary> Regex </summary>
