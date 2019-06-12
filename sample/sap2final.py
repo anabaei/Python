@@ -5,13 +5,13 @@ def lambdaMap(arr):
     # for i in range(0,n):  
     #     lst=list(map(int,input().split()))
     #     arr.append(lst)
-
+    list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x))), arr))
     
     for j in range(0,len(arr)):
         for k in arr[j]:
             if (k > 0):
                 print(k*k, end =" ")
-        print("")
+        
 
 
 
