@@ -108,6 +108,12 @@ class DLLNode:
         self.previous = new_previous
 ```
 </details>
+<details>
+    <summary> find Cycle, using tuples </summary>
+  
+* We use tuples to track cycles
+
+</details>    
 
 <details>
     <summary> Lambda </summary>
