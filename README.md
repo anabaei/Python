@@ -120,6 +120,8 @@ class DLLNode:
 
 * Lambda is anonymouse functions like
 ```python
+(lambda x: 3*x)(2)
+
 sum = lambda a, b, c: a + b + c
 sum(1,2,3) #return 6
 ```
