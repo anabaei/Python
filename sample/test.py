@@ -1,21 +1,21 @@
 
 
-def getMinimumMoves(arr):
+# def getMinimumMoves(arr):
    
-    cnt = 0
-    for i in (arr):
-        move = False
-        print('_____')
-        for j in range(arr.index(i), len(arr)):
-            print(arr[j])
-            if(i>arr[j]):
-                move = True
-                temp = i
-                arr[arr.index(i)] = arr[j]
-                arr[j] = temp
-        if(move):
-            cnt= cnt+1
-    return cnt 
+#     cnt = 0
+#     for i in (arr):
+#         move = False
+#         print('_____')
+#         for j in range(arr.index(i), len(arr)):
+#             print(arr[j])
+#             if(i>arr[j]):
+#                 move = True
+#                 temp = i
+#                 arr[arr.index(i)] = arr[j]
+#                 arr[j] = temp
+#         if(move):
+#             cnt= cnt+1
+#     return cnt 
 
     #print(cnt)
         
@@ -26,17 +26,24 @@ def getMinimumMoves(arr):
 #   [1,2,5,6,3]
 
 
-print(getMinimumMoves([5,1,3,2]))
+#print(getMinimumMoves([5,1,3,2]))
+
+def f(ar):
+    if(ar>0):
+        return (ar**2)
 
 
-# def lambMap(arr):
-#     #  list(map(lambda x: x+x, arr))
-#     #list(map(lambda x: list(map(lambda y: y**2,x)) ,arr))
-#     list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x)))   , arr)) 
+def lambMap(arr):
+    #  list(map(lambda x: x+x, arr))
+    #list(map(lambda x: list(map(lambda y: y**2,x)) ,arr))
+    # list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x)))   , arr)) 
+ #   list(map(lambda x: print(list(map( lamda y:  ,x))) , arr)) 
+
+
+#lambMap([[1,-2,3],[2,3]])
 
 
 
-# lambMap([[1,-2,3],[2,3]])
 
 # import re
 
