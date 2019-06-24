@@ -1,21 +1,74 @@
+#cr2032
 
-
-def getMinimumMoves(arr):
+def minSum(num, k):
+  
+     
    
-    cnt = 0
-    for i in (arr):
-        move = False
-        print('_____')
-        for j in range(arr.index(i), len(arr)):
-            print(arr[j])
-            if(i>arr[j]):
-                move = True
-                temp = i
-                arr[arr.index(i)] = arr[j]
-                arr[j] = temp
-        if(move):
-            cnt= cnt+1
-    return cnt 
+    #result = 0 
+   
+    for j in range(0,k):
+        
+        result = 0
+        maxindex=0
+        max=-1
+        for index, number in enumerate(num):
+            result +=number   
+            if(number>max):
+                max=number
+                maxindex=index
+
+        if (max < 2):
+            num[maxindex]= max
+            break
+        else:
+            result = result - num[maxindex] 
+            num[maxindex] = (round(max/2))
+            result = result + round(max/2) 
+          
+    return result
+
+# print(minSum([100000,20,99999],10000000))
+# print(minSum([10,20,7],4))
+# print(minSum([10,20,99999],4))
+
+
+
+
+
+
+
+
+# def cycle():
+#     print("")
+#     arr=["a","b","c","d","e"]
+#     res=[]
+#     for i,item in enumerate(arr):
+#           res.append((i,item))
+#           res.append("x")
+#     for j in arr:
+#         print(j)
+#     print(res)
+
+
+
+# cycle()
+
+# def getMinimumMoves(arr):
+   
+#     cnt = 0
+#     for i in (arr):
+#         move = False
+#         print('_____')
+#         for j in range(arr.index(i), len(arr)):
+#             print(arr[j])
+#             if(i>arr[j]):
+#                 move = True
+#                 temp = i
+#                 arr[arr.index(i)] = arr[j]
+#                 arr[j] = temp
+#         if(move):
+#             cnt= cnt+1
+#     return cnt 
 
     #print(cnt)
         
@@ -26,15 +79,40 @@ def getMinimumMoves(arr):
 #   [1,2,5,6,3]
 
 
-print(getMinimumMoves([5,1,3,2]))
+#print(getMinimumMoves([5,1,3,2]))
+# res=[]
+# def myfunc(a):
+#     if(a>0):
+#         return res.append(a)
+
+
+
+# def a():
+#     map(lambda x: print(list(map(lambda y: y**2 if y>0 else print(""),x))),  [[2,4], [-1,3,4]])
+
+
+
+# y = map(lambda x: res.append(x**2) if x>0 else None, (2, -3, 5))
+# arr = [[1,2],[3,3]]
+#y =  map(map(lambda x: res.append(x**2) if x>0 else None, (2, -3, 5)), arr)
+#list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x)))   , arr)) 
+#a = [1,2,3,4]
+#f = map( lambda x: print(list(map(lambda y: y**2 if y>0 else print(""),x))),
+
+ # [[2,4], [-1,3,4]])
+# print( a() )
+
+
+
+
 
 
 # def lambMap(arr):
 #     #  list(map(lambda x: x+x, arr))
 #     #list(map(lambda x: list(map(lambda y: y**2,x)) ,arr))
-#     list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x)))   , arr)) 
-
-
+#     #list(map(lambda x: print(list(map(lambda y: y**2 if y>0 else None ,x)))   , arr)) 
+#     map(lambda x: print(x), arr)
+    
 
 # lambMap([[1,-2,3],[2,3]])
 
