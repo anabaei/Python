@@ -1,6 +1,45 @@
 
 
 <details>
+    <summary> captcha </summary>
+   
+* Captcha    
+```python
+import sys
+import base64
+import json
+
+from captcha.audio import AudioCaptcha
+from captcha.image import ImageCaptcha
+
+audio_captcha = AudioCaptcha(voicedir='./voices')
+audio_data = audio_captcha.generate('1717')
+base64EncodedPngDataAudio = base64.b64encode(audio_data).decode("utf-8")
+
+image = ImageCaptcha()
+pngData = image.generate('1234').getvalue()
+base64EncodedPngDataImage = base64.b64encode(pngData).decode("utf-8")
+
+# print('data:image/png;charset=utf-8;base64,' + base64EncodedPngDataAudio)
+# print('data:audio/wav;charset=utf-8;base64,' + base64EncodedPngDataImage)
+
+result = {
+ "audioData": 'data:audio/wav;charset=utf-8;base64,' + base64EncodedPngDataImage,
+ "imageData": 'data:image/png;charset=utf-8;base64,' + base64EncodedPngDataAudio
+}
+jsonResult = json.dumps(result)
+print(jsonResult)
+
+#print(json.dumps(json))
+
+
+sys.stdout.flush()
+
+```
+    </details>
+
+
+<details>
     <summary> Abstact data type </summary>
     
 * Abstract Data types ADTs means what kind of data a data structure can hold and what operations are allowed on that data.
