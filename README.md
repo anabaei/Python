@@ -36,7 +36,8 @@ print(jsonResult)
 sys.stdout.flush()
 
 ```
-    </details>
+
+</details>
 
 
 <details>
