@@ -24,6 +24,12 @@ class SLLNode:
         """Replace the existing value of the self.next attribute with new_next"""
         self.next = new_next        
 
-
+node = SLLNode('apple')
+node.get_data()
+node.set_data(7)
+# node2 = SLLNode(9)
+# node.set_next(node2)
+# node.get_next() 
+print(node.data)
 
 
