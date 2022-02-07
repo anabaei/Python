@@ -1,3 +1,4 @@
+# 1
 class SLLNode:
     def __init__(self, data):
         self.data = data
