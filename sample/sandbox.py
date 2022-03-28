@@ -1,8 +1,3 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
 class Solution:
     def newfun():
         print("A")
@@ -10,14 +5,20 @@ class Solution:
 
 # Solution().newfun()
 
-class SLLNode:
-    def __init__(self, data):
+class Node:
+    def __init__(self, data, next=None):
         self.data = data
-        self.next = None
+        self.next = next
 
      # this method returns a readable anyobjest we have. It returns as string format our self.data
     def __repr__(self):
-        return "SLLNode object: data={}".format(self.data)
+       res = str(self.data)
+       while(node.next):
+           node = node.next
+           res = res + "-->" + str(node.data)
+         
+       print(res)
+       return res
 
     def get_data(self):
         """Return the self.data attribute."""
@@ -36,12 +37,12 @@ class SLLNode:
         """Replace the existing value of the self.next attribute with new_next"""
         self.next = new_next        
 
-node = SLLNode('apple')
+node = Node('apple')
 node.get_data()
 node.set_data(7)
-# node2 = SLLNode(9)
-# node.set_next(node2)
+node2 = Node(9)
+node.set_next(node2)
 # node.get_next() 
-print(node.data)
+print(node.__repr__())
 
 
