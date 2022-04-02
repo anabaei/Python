@@ -264,7 +264,28 @@ for _ in xrange(n):
 To update an 2d array or matrix
 aa[1] = [4,5]    # would update row 2 
 aa[1][2] = 4 # does not do what you really expect! 
+
+#exist
+if a in array: #true false
 ```
+* Append
+```python
+a = [2]
+a.append(3) # a =[2,3]
+a.pop()  # a = [2]
+a.insert(5,0) # a = [5,2] insert value into index 0
+print(5 in a) # True
+
+```
+
+#### Set
+* You can have only one unique key
+```javascript
+a = {2}
+b = Set()
+a.add(2) // {2}
+```
+
 #### Map & Lambda
 * Map is a function run on a list as 
 ```python
@@ -375,14 +396,16 @@ st = "x is bigger than y" if(x>y) else "y is bigger"
          print(i,d)
 ```
 * Hashes
+
 ```python
-   hashes = {'a':1, 'b':2, 'c':3, 'd':4}
-        hash2 = dict(a=1, b=2, c=3, d=4)
+   hashes = {'a':1, 'b':[2], 'c':3}
+        hash2 = dict(a=1, b=[2], c=3)
         for k,v in hash2.items():
             print(f'{k}, {v}')
          for k in hash2.keys(): print(k)
          for v in hash2.values(): print(v)
-         hash2['f']=5 #assign new value
+         hash2['a']=5 #assign new value
+         hash2['b'].append(3) # append 3 to the array
 ```
 #### Classes
 ```python

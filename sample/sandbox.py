@@ -9,6 +9,7 @@ class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
+        # self.stack = []
 
      # this method returns a readable anyobjest we have. It returns as string format our self.data
     def __repr__(self):
@@ -19,6 +20,8 @@ class Node:
          
        print(res)
        return res
+
+
 
     def get_data(self):
         """Return the self.data attribute."""
@@ -42,7 +45,16 @@ node.get_data()
 node.set_data(7)
 node2 = Node(9)
 node.set_next(node2)
+hash2 = dict(a=1, b=2, c=3, d=4)
+hash2['e']=[5] 
+hash2['e'].append(4)
+for k,v in hash2.items():
+            print(f'{k}, {v}')
 # node.get_next() 
-print(node.__repr__())
-
+# print(node.__repr__())
+# node.stack.append(2)
+# node.stack.append(3)
+# node.stack.append(4)
+# node.stack.insert(0,12)
+# print(node.stack)
 
