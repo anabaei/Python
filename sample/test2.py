@@ -15,7 +15,4 @@ def lambMap(arr):
 #    list(map(lambda x: print(list(map( lamda y:  ,x))) , arr)) 
 
 
-
-
-
 print(lambMap([[1,-2,3],[2,3]]))
